@@ -53,7 +53,7 @@
 		</ul>
 	</div>
 	<div class="navbar-end">
-		<a class="btn btn-neutral">Contact</a>
+		<!-- <a class="btn btn-neutral">Contact</a> -->
 	</div>
 </div>
 

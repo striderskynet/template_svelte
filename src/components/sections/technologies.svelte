@@ -4,7 +4,9 @@
 	import Icontech from './icontech.svelte';
 </script>
 
-<div class="flex h-[100vh] w-[100vw] justify-center items-center text-center relative">
+<div
+	class="flex h-[100vh] w-[100vw] justify-center items-center text-center relative -ml-6 md:-ml-52"
+>
 	<div class="backdrop-blur-[2px] w-[100%] h-[100%] absolute z-20"></div>
 	<div class="absolute z-30">
 		<IntersectionObserver let:intersecting once={true}>
