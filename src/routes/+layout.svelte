@@ -2,6 +2,7 @@
 	import { _, locale, locales } from '$language/i18n';
 
 	//Sections
+	import Hero from '$components/sections/hero.svelte';
 	import Technologies from '$components/sections/technologies.svelte';
 	import Footer from '$components/sections/footer.svelte';
 	import Navbar from '$components/navbar.svelte';
@@ -11,16 +12,19 @@
 	<title>{$_('global.title')}</title>
 </svelte:head>
 
-<article class="snap-mandatory snap-y overflow-x-hidden">
-	<!-- <section><slot /></section> -->
+<article>
+	<section><slot /></section>
 	<Navbar />
-	<!-- <section class="bg-slate-900 h-[100vh] snap-start border-b-slate-800 border-b-2"></section> -->
 	<section
-		class="overflow-hidden bg-slate-900 w-[100vw] h-[100vh] snap-start border-b-slate-800 border-b-2 z-30"
+		class="bg-slate-900 h-[100vh] snap-start border-b-slate-800 border-b-2 flex flex-col p-10 pt-52 md:flex-row items-center object-middle md:justify-between md:px-44 align-center"
 	>
-		<div class="grid-background">
-			<Technologies />
-		</div>
+		<Hero />
+	</section>
+	<section
+		class="bg-slate-900 h-[100vh] w-[100vw] border-b-slate-800 border-b-2 z-30 overflow-hidden relative"
+	>
+		<div class="grid-background"></div>
+		<Technologies />
 	</section>
 	<section class="bg-slate-200 snap-start border-b-slate-800 border-b-2">
 		<Footer />
@@ -43,6 +47,9 @@
 	.grid-background {
 		content: '';
 		display: block;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
 		background-image: linear-gradient(
 				rgb(25 33 52) 1px,
 				transparent 1px,
@@ -57,7 +64,7 @@
 				#1c7cbb calc(100% - 0px)
 			);
 		background-size: 10% 10%;
-		z-index: 10;
-		transform: rotate(25deg);
+		z-index: 0;
+		transform: rotate(24deg);
 	}
 </style>

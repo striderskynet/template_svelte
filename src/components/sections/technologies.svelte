@@ -4,46 +4,47 @@
 	import Icontech from './icontech.svelte';
 </script>
 
-<div class="rotate-class flex items-center text-center h-[100vh] select-none relative">
-	<!-- <div class="backdrop-blur-[2px] w-[100%] h-[100%] absolute z-10"></div> -->
-	<IntersectionObserver let:intersecting once={true}>
-		{#if intersecting}
-			<h1
-				in:fly={{ delay: 400, duration: 1000, y: -200 }}
-				class="absolute text-5xl w-[100vw] -mt-16 z-30"
-			>
-				<div>
-					a <span
-						class="tracking-tight font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-green-800 to-green-500"
-					>
-						Full-Stack
-					</span> developer
+<div class="flex h-[100vh] w-[100vw] justify-center items-center text-center relative">
+	<div class="backdrop-blur-[2px] w-[100%] h-[100%] absolute z-20"></div>
+	<div class="absolute z-30">
+		<IntersectionObserver let:intersecting once={true}>
+			{#if intersecting}
+				<div
+					in:fly={{ delay: 400, duration: 1000, y: -200 }}
+					class="text-5xl -rotate-[15deg] select-none hover:cursor-pointer hover:scale-125 duration-500"
+				>
+					<div>
+						a <span
+							class="tracking-tight font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-green-800 to-green-500"
+						>
+							Full-Stack
+						</span> developer
+					</div>
+					<div>with a passion</div>
 				</div>
-				<div>with a passion</div>
-			</h1>
-		{/if}
-	</IntersectionObserver>
+			{/if}
+		</IntersectionObserver>
+	</div>
+	<div class="absolute z-10">
+		<!-- Front-End -->
+		<Icontech {...{ top: -2, left: 0, tech: 'javascript' }} />
+		<Icontech {...{ top: -1.5, left: -1.5, tech: 'css3' }} />
+		<Icontech {...{ top: -1.5, left: 1.5, tech: 'html5' }} />
 
-	<!-- Front-End -->
-	<Icontech {...{ top: 65, left: 35, tech: 'javascript' }} />
-	<Icontech {...{ top: 30, left: 35, tech: 'css3' }} />
-	<Icontech {...{ top: 35, left: 65, tech: 'html5' }} />
-	<Icontech {...{ top: 30, left: 55, tech: 'react' }} />
-	<Icontech {...{ top: 35, left: 45, tech: 'svelte' }} />
+		<!-- Frameworks -->
+		<Icontech {...{ top: 1.5, left: 1, tech: 'react' }} />
+		<Icontech {...{ top: 0.5, left: 1.5, tech: 'svelte' }} />
 
-	<!-- Back-End -->
-	<Icontech {...{ top: 50, left: 65, tech: 'php' }} />
-	<Icontech {...{ top: 53, left: 37, tech: 'laravel' }} />
-	<Icontech {...{ top: 65, left: 55, tech: 'python' }} />
-	<Icontech {...{ top: 50, left: 30, tech: 'postgresql' }} />
-	<Icontech {...{ top: 60, left: 50, tech: 'mysql' }} />
+		<!-- Back-End -->
+		<Icontech {...{ top: 1, left: -2.5, tech: 'php' }} />
+		<Icontech {...{ top: -1, left: -3, tech: 'laravel' }} />
+		<Icontech {...{ top: 1.5, left: -1.5, tech: 'python' }} />
 
-	<!-- Software -->
-	<Icontech {...{ top: 65, left: 43, tech: 'vscode' }} />
+		<!-- Database -->
+		<Icontech {...{ top: -1, left: 3, tech: 'postgresql' }} />
+		<Icontech {...{ top: 0.5, left: 0, tech: 'mysql' }} />
+
+		<!-- Software -->
+		<Icontech {...{ top: 0, left: 3, tech: 'vscode' }} />
+	</div>
 </div>
-
-<style>
-	.rotate-class {
-		transform: rotate(-40deg);
-	}
-</style>

@@ -4,9 +4,9 @@
 
 <footer class="footer footer-center p-10 bg-base-200 text-base-content">
 	<div class="grid grid-flow-col gap-4">
-		<a class="link link-hover">About me</a>
-		<a class="link link-hover">Experience</a>
-		<a class="link link-hover">Portfolio</a>
+		<a href="#link" class="link link-hover">About me</a>
+		<a href="#link" class="link link-hover">Experience</a>
+		<a href="#link" class="link link-hover">Portfolio</a>
 	</div>
 	<div class="flex">
 		<a href="https://github.com/striderskynet" target="_parent">
