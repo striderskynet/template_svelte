@@ -4,6 +4,7 @@
 	//Sections
 	import Hero from '$components/sections/hero.svelte';
 	import Technologies from '$components/sections/technologies.svelte';
+	import Portfolio from '$components/sections/portfolio.svelte';
 	import Footer from '$components/sections/footer.svelte';
 	import Navbar from '$components/navbar.svelte';
 </script>
@@ -40,6 +41,11 @@
 	>
 		<div class="grid-background"></div>
 		<Technologies />
+	</section>
+	<section
+		class="bg-slate-900 h-[100vh] w-[100vw] md:w-[80vw] border-b-slate-800 border-b-2 z-30 overflow-hidden relative items-center flex"
+	>
+		<Portfolio />
 	</section>
 	<section class="bg-slate-200 snap-start border-b-slate-800 border-b-2 w-[100vw]">
 		<Footer />
