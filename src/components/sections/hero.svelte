@@ -11,7 +11,9 @@
 			<span class="text-4xl">{@html $_('hero.title')} </span>
 			<span class="my-5 max-w-[75ch]">{@html $_('hero.subtitle')}</span>
 			<div in:fly={{ delay: 400, duration: 1000, x: 200 }}>
-				<button class="btn btn-primary w-[35%]">{@html $_('hero.contact')}</button>
+				<a href="mailto:olazabal.business@gmail.com">
+					<button class="btn btn-primary w-[35%]">{@html $_('hero.contact')}</button>
+				</a>
 			</div>
 		</div>
 	{/if}
