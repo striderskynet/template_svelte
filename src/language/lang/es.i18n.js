@@ -9,11 +9,7 @@ export default {
 	'navbar.menu_portfolio': 'Portafolio',
 
 	'hero.title': `Soy Jose Olazabal, un desarrollador <strong class="text-purple-500">Full Stack</strong>.`,
-	'hero.subtitle': `Actualmente vivo en Cuba, tengo mas de 
-						<strong class="text-white font-bold">20 años</strong>
-						de experiencia programando. Y mas de 
-						<strong class="text-white font-bold">15 años</strong>
-						desarrolando sitios web.`,
+	'hero.subtitle': `Actualmente vivo en Cuba, me encanta crear y disenar sitios web y aplicaciones, y tengo una pasion por programar.`,
 	'hero.contact': 'contactame',
 
 	'technology.banner': `<div>un <span class="tracking-tight font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-green-800 to-green-500">
