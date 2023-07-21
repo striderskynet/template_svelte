@@ -19,7 +19,7 @@
 					{$_('portfolio.taller_subtitle')}
 				</span>
 
-				<span class="my-5 flex object-center align-middle items-center">
+				<span class="my-5 flex flex-wrap object-center align-middle items-center">
 					{$_('portfolio.taller_tech')}
 					<Icon icon="devicon:react" class="mx-2 text-3xl rounded-lg" />
 					<Icon icon="devicon:javascript" class="mx-2 text-3xl rounded-lg" />
