@@ -37,7 +37,7 @@
 		<Icontech {...{ top: 1.5, left: -1.5, tech: 'python' }} />
 
 		<!-- Database -->
-		<Icontech {...{ top: -1, left: 3, tech: 'postgresql' }} />
+		<Icontech {...{ top: -1, left: 3, tech: 'tailwindcss' }} />
 		<Icontech {...{ top: 0.5, left: 0, tech: 'mysql' }} />
 
 		<!-- Software -->

@@ -25,6 +25,7 @@
 					<Icon icon="devicon:javascript" class="mx-2 text-3xl rounded-lg" />
 					<Icon icon="devicon:html5" class="mx-2 text-3xl rounded-lg" />
 					<Icon icon="devicon:css3" class="mx-2 text-3xl rounded-lg" />
+					<Icon icon="devicon:bootstrap" class="mx-2 text-3xl rounded-lg" />
 					<Icon icon="devicon:mysql" class="mx-2 text-3xl rounded-lg" />
 					<Icon icon="devicon:azure" class="mx-2 text-3xl rounded-lg" />
 				</span>
