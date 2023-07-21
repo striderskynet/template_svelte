@@ -25,6 +25,18 @@ export default {
 	'portfolio.showly_tech': `Tecnologias:`,
 	'portfolio.showly_button': 'Visitame',
 
+	'portfolio.travel_title': 'Admin de Clientes / Reservaciones para una Agencia de Viajes',
+	'portfolio.travel_subtitle':
+		'Un panel administrativo para controlar los clientes, hoteles y reservaciones en una de las agencias de viajes mas grandes de Cuba',
+	'portfolio.travel_tech': `Tecnologias:`,
+	'portfolio.travel_button': 'Visit',
+
+	'portfolio.taller_title': 'Administracion de Taller Moviles / PC',
+	'portfolio.taller_subtitle':
+		'Controlar Trabajos, Tickets, Clientes, Caja de Venta, Inventario y mas para un Taller de PC / Mobiles',
+	'portfolio.taller_tech': `Tecnologias:`,
+	'portfolio.taller_button': 'Visit',
+
 	'footer.copyright_start': 'Copyright © 2023 - Hecho con ',
 	'footer.copyright_mid': ' y ',
 	'footer.copyright_end': 'por Nesty',

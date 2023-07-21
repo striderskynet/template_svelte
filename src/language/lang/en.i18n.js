@@ -25,6 +25,18 @@ export default {
 	'portfolio.showly_tech': `Tech:`,
 	'portfolio.showly_button': 'Visit',
 
+	'portfolio.travel_title': 'Travel Agency Client / Hotel Management',
+	'portfolio.travel_subtitle':
+		'A admin dashboard app to management and control the clients and hotels / reservations / tours of a major travel agency in Cuba',
+	'portfolio.travel_tech': `Tech:`,
+	'portfolio.travel_button': 'Visit',
+
+	'portfolio.taller_title': 'Computer / Mobile Store Management',
+	'portfolio.taller_subtitle':
+		'Manage Clients, Tickets, Vouchers, Point-of-Sale, Inventory and more for a Computer/Mobile Store.',
+	'portfolio.taller_tech': `Tech:`,
+	'portfolio.taller_button': 'Visit',
+
 	'footer.copyright_start': 'Copyright © 2023 - Made with ',
 	'footer.copyright_mid': ' and ',
 	'footer.copyright_end': 'by Nesty',

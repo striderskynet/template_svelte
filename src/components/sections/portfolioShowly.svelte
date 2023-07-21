@@ -1,6 +1,7 @@
 <script>
 	import { _, locale, locales } from '$language/i18n';
 	import { fade, blur, fly, slide, scale } from 'svelte/transition';
+
 	import IntersectionObserver from '$hooks/IntersectionObserver.svelte';
 
 	import ShowlyDisplay from '$assets/showly_display.png';
@@ -38,7 +39,7 @@
 	<IntersectionObserver let:intersecting>
 		{#if intersecting}
 			<a
-				class="block w-[200px] mt-24 md:mt-0 md:min-w-[150px]"
+				class="block min-w-[200px] mt-12 md:mt-0 md:min-w-[150px]"
 				in:blur={{ delay: 400, duration: 500 }}
 				href="https://showly.vercel.app"
 				target="_blank"

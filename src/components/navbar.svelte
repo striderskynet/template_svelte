@@ -1,8 +1,22 @@
 <script>
 	import { _, locale, locales } from '$language/i18n';
+	import { page } from '$app/stores';
+
+	console.log($page);
 
 	const handleClickLang = (e) => {
 		e.target.checked ? ($locale = 'es') : ($locale = 'en');
+	};
+
+	const handleAnchorClick = (event) => {
+		const link = event.currentTarget;
+		const anchorId = new URL(link.href).hash.replace('#', '');
+		const anchor = document.getElementById(anchorId);
+
+		window.scrollTo({
+			top: anchor.offsetTop,
+			behavior: 'smooth'
+		});
 	};
 
 	$: _;
@@ -34,7 +48,7 @@
 				class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-b-lg w-52"
 			>
 				<li>
-					<a>{$_('navbar.menu_portfolio')}</a>
+					<a href="#anchor-portfolio">{$_('navbar.menu_portfolio')}</a>
 					<!-- <ul class="p-2">
 						<li><a>Showly - TV Series</a></li>
 						<li><a>Store Management System</a></li>
@@ -48,7 +62,13 @@
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal px-1">
-			<li><a>{$_('navbar.menu_portfolio')}</a></li>
+			<li>
+				<a
+					href="#anchor-portfolio"
+					class:active={$page.url.hash.includes('#anchor-portfolio')}
+					on:click|preventDefault={handleAnchorClick}>{$_('navbar.menu_portfolio')}</a
+				>
+			</li>
 			<li><a>{$_('navbar.menu_experience')}</a></li>
 			<li><a>{$_('navbar.menu_about')}</a></li>
 			<!-- <li tabindex="0">

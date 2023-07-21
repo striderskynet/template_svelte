@@ -1,10 +1,15 @@
 <script>
+	import { browser } from '$app/environment';
 	import { _, locale, locales } from '$language/i18n';
+
+	import Carousel from 'svelte-carousel';
 
 	//Sections
 	import Hero from '$components/sections/hero.svelte';
 	import Technologies from '$components/sections/technology.svelte';
-	import Portfolio from '$components/sections/portfolio.svelte';
+	import PortfolioShowly from '$components/sections/PortfolioShowly.svelte';
+	import PortfolioTravel from '$components/sections/PortfolioTravel.svelte';
+	import PortfolioTaller from '$components/sections/PortfolioTaller.svelte';
 	import Footer from '$components/sections/footer.svelte';
 	import Navbar from '$components/navbar.svelte';
 </script>
@@ -38,16 +43,33 @@
 		<Hero />
 	</section>
 	<section
+		id="anchor-tech"
 		class="bg-slate-900 h-[100vh] w-[100vw] md:w-[80vw] border-b-slate-800 border-b-2 z-30 overflow-hidden relative"
 	>
 		<div class="grid-background"></div>
 		<Technologies />
 	</section>
-	<section
-		class="bg-slate-900 h-[100vh] w-[100vw] md:w-[80vw] border-b-slate-800 border-b-2 z-30 overflow-hidden relative items-center flex"
-	>
-		<Portfolio />
-	</section>
+	<div id="anchor-portfolio"></div>
+	{#if browser}
+		<Carousel autoplay autoplayDuration="5000" pauseOnFocus autoplayProgressVisible>
+			<section
+				class="bg-slate-900 h-[100vh] w-[100vw] md:w-[80vw]z-30 overflow-hidden relative items-center flex"
+			>
+				<PortfolioShowly />
+			</section>
+			<section
+				class="bg-slate-900 h-[100vh] w-[100vw] md:w-[80vw] z-30 overflow-hidden relative items-center flex"
+			>
+				<PortfolioTravel />
+			</section>
+
+			<section
+				class="bg-slate-900 h-[100vh] w-[100vw] md:w-[80vw] z-30 overflow-hidden relative items-center flex"
+			>
+				<PortfolioTaller />
+			</section>
+		</Carousel>
+	{/if}
 	<section class="bg-slate-200 snap-start border-b-slate-800 border-b-2 w-[100vw]">
 		<Footer />
 	</section>
@@ -63,6 +85,7 @@
 
 	* {
 		font-family: 'Roboto', sans-serif;
+		scroll-behavior: smooth;
 		/* font-family: 'Inter', sans-serif; */
 	}
 
