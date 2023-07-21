@@ -3,7 +3,7 @@
 
 	//Sections
 	import Hero from '$components/sections/hero.svelte';
-	import Technologies from '$components/sections/technologies.svelte';
+	import Technologies from '$components/sections/technology.svelte';
 	import Portfolio from '$components/sections/portfolio.svelte';
 	import Footer from '$components/sections/footer.svelte';
 	import Navbar from '$components/navbar.svelte';
@@ -11,6 +11,7 @@
 
 <svelte:head>
 	<title>{$_('global.title')}</title>
+	<meta name="description" content={$_('global.description')} />
 </svelte:head>
 
 <div class="area">

@@ -1,3 +1,13 @@
+<script>
+	import { _, locale, locales } from '$language/i18n';
+
+	const handleClickLang = (e) => {
+		e.target.checked ? ($locale = 'es') : ($locale = 'en');
+	};
+
+	$: _;
+</script>
+
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <!-- svelte-ignore a11y-label-has-associated-control -->
 <!-- svelte-ignore a11y-missing-attribute -->
@@ -23,24 +33,24 @@
 				tabindex="0"
 				class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-b-lg w-52"
 			>
-				<li><a>About</a></li>
-				<li><a>Experience</a></li>
 				<li>
-					<a>Portfolio</a>
+					<a>{$_('navbar.menu_portfolio')}</a>
 					<!-- <ul class="p-2">
 						<li><a>Showly - TV Series</a></li>
 						<li><a>Store Management System</a></li>
 					</ul> -->
 				</li>
+				<li><a>{$_('navbar.menu_experience')}</a></li>
+				<li><a>{$_('navbar.menu_about')}</a></li>
 			</ul>
 		</div>
 		<a class="btn btn-ghost normal-case text-xl">Olazabal.J</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal px-1">
-			<li><a>About</a></li>
-			<li><a>Experience</a></li>
-			<li><a>Portfolio</a></li>
+			<li><a>{$_('navbar.menu_portfolio')}</a></li>
+			<li><a>{$_('navbar.menu_experience')}</a></li>
+			<li><a>{$_('navbar.menu_about')}</a></li>
 			<!-- <li tabindex="0">
 				<details>
 					<summary>Portfolio</summary>
@@ -53,7 +63,12 @@
 		</ul>
 	</div>
 	<div class="navbar-end">
-		<!-- <a class="btn btn-neutral">Contact</a> -->
+		<div class="form-control">
+			<label class="label cursor-pointer">
+				<input on:click={handleClickLang} type="checkbox" class="toggle" />
+				<span class="label-text mx-2">Spanish</span>
+			</label>
+		</div>
 	</div>
 </div>
 

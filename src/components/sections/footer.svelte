@@ -1,12 +1,13 @@
 <script>
+	import { _, locale, locales } from '$language/i18n';
 	import Icon from '@iconify/svelte';
 </script>
 
 <footer class="footer footer-center p-10 bg-base-200 text-base-content">
 	<div class="grid grid-flow-col gap-4">
-		<a href="#link" class="link link-hover">About</a>
-		<a href="#link" class="link link-hover">Experience</a>
-		<a href="#link" class="link link-hover">Portfolio</a>
+		<a href="#link" class="link link-hover">{$_('navbar.menu_portfolio')}</a>
+		<a href="#link" class="link link-hover">{$_('navbar.menu_experience')}</a>
+		<a href="#link" class="link link-hover">{$_('navbar.menu_about')}</a>
 	</div>
 	<div class="flex">
 		<a href="https://github.com/striderskynet" target="_parent">
@@ -39,15 +40,15 @@
 	</div>
 	<div>
 		<p class="flex">
-			Copyright © 2023 - Made with
-			<span data-tip="Love" class="tooltip hover:cursor-pointer"
+			{$_('footer.copyright_start')}
+			<span data-tip={$_('footer.copyright_love')} class="tooltip hover:cursor-pointer"
 				><Icon icon="mdi:heart" class="text-red-500 mx-2 text-xl" /></span
 			>
-			and
+			{$_('footer.copyright_mid')}
 			<span data-tip="Svelte" class="tooltip hover:cursor-pointer"
 				><Icon icon="devicon:svelte" class="text-red-500 mx-2 text-xl" /></span
 			>
-			by Nesty
+			{$_('footer.copyright_end')}
 		</p>
 	</div>
 </footer>

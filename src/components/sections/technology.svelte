@@ -1,4 +1,5 @@
 <script>
+	import { _, locale, locales } from '$language/i18n';
 	import IntersectionObserver from '$hooks/IntersectionObserver.svelte';
 	import { fly } from 'svelte/transition';
 	import Icontech from './icontech.svelte';
@@ -15,14 +16,7 @@
 					in:fly={{ delay: 400, duration: 1000, y: -200 }}
 					class="text-5xl -rotate-[15deg] select-none hover:cursor-pointer hover:scale-125 duration-500"
 				>
-					<div>
-						a <span
-							class="tracking-tight font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-green-800 to-green-500"
-						>
-							Full-Stack
-						</span> developer
-					</div>
-					<div>with a passion</div>
+					{@html $_('technology.banner')}
 				</div>
 			{/if}
 		</IntersectionObserver>
