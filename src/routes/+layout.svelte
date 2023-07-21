@@ -7,9 +7,9 @@
 	//Sections
 	import Hero from '$components/sections/hero.svelte';
 	import Technologies from '$components/sections/technology.svelte';
-	import PortfolioShowly from '$components/sections/PortfolioShowly.svelte';
-	import PortfolioTravel from '$components/sections/PortfolioTravel.svelte';
-	import PortfolioTaller from '$components/sections/PortfolioTaller.svelte';
+	import PortfolioShowly from '$components/sections/portfolio.Showly.svelte';
+	import PortfolioTravel from '$components/sections/portfolio.Travel.svelte';
+	import PortfolioTaller from '$components/sections/portfolio.Taller.svelte';
 	import Footer from '$components/sections/footer.svelte';
 	import Navbar from '$components/navbar.svelte';
 </script>
