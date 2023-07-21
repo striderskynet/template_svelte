@@ -2,8 +2,6 @@
 	import { _, locale, locales } from '$language/i18n';
 	import { page } from '$app/stores';
 
-	console.log($page);
-
 	const handleClickLang = (e) => {
 		e.target.checked ? ($locale = 'es') : ($locale = 'en');
 	};
