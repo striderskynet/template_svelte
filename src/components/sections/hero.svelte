@@ -21,7 +21,13 @@
 <IntersectionObserver let:intersecting once={true}>
 	{#if intersecting}
 		<div in:fly={{ delay: 400, duration: 1000, y: -200 }} class="">
-			<img alt="Jose Olazabal" class="w-[300px] hover:scale-110 duration-500" src={UserAvatar} />
+			<img
+				alt="Jose Olazabal"
+				width="300"
+				height="200"
+				class="hover:scale-110 duration-500"
+				src={UserAvatar}
+			/>
 		</div>
 	{/if}
 </IntersectionObserver>

@@ -56,7 +56,14 @@
 	</section>
 	<div id="anchor-portfolio"></div>
 	{#if browser}
-		<Carousel autoplay autoplayDuration="5000" pauseOnFocus autoplayProgressVisible>
+		<Carousel
+			autoplay
+			autoplayDuration="5000"
+			pauseOnFocus
+			autoplayProgressVisible
+			dots={false}
+			arrows={false}
+		>
 			<section
 				class="bg-slate-900 h-[100vh] w-[100vw] md:w-[80vw]z-30 overflow-hidden relative items-center flex"
 			>

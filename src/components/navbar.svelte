@@ -47,16 +47,12 @@
 			>
 				<li>
 					<a href="#anchor-portfolio">{$_('navbar.menu_portfolio')}</a>
-					<!-- <ul class="p-2">
-						<li><a>Showly - TV Series</a></li>
-						<li><a>Store Management System</a></li>
-					</ul> -->
 				</li>
-				<li><a>{$_('navbar.menu_experience')}</a></li>
-				<li><a>{$_('navbar.menu_about')}</a></li>
+				<li><a href="#anchor-experience">{$_('navbar.menu_experience')}</a></li>
+				<li><a href="#anchor-about">{$_('navbar.menu_about')}</a></li>
 			</ul>
 		</div>
-		<a class="btn btn-ghost normal-case text-xl">Olazabal.J</a>
+		<a class="btn btn-ghost normal-case text-xl" href="/">Olazabal.J</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal px-1">
@@ -67,17 +63,8 @@
 					on:click|preventDefault={handleAnchorClick}>{$_('navbar.menu_portfolio')}</a
 				>
 			</li>
-			<li><a>{$_('navbar.menu_experience')}</a></li>
-			<li><a>{$_('navbar.menu_about')}</a></li>
-			<!-- <li tabindex="0">
-				<details>
-					<summary>Portfolio</summary>
-					<ul class="p-2">
-						<li><a>Showly - TV Series</a></li>
-						<li><a>Store Management System</a></li>
-					</ul>
-				</details>
-			</li> -->
+			<li><a href="#anchor-experience">{$_('navbar.menu_experience')}</a></li>
+			<li><a href="#anchor-about">{$_('navbar.menu_about')}</a></li>
 		</ul>
 	</div>
 	<div class="navbar-end">

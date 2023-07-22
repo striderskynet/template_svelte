@@ -10,29 +10,29 @@
 		<a href="#link" class="link link-hover">{$_('navbar.menu_about')}</a>
 	</div>
 	<div class="flex">
-		<a href="https://github.com/striderskynet" target="_parent">
+		<a href="https://github.com/striderskynet" target="_parent" alt="Facebook">
 			<span data-tip="Facebook" class="tooltip hover:cursor-pointer hover:scale-125">
 				<Icon icon="logos:facebook" class="mx-2 text-3xl" />
 			</span>
 		</a>
-		<a href="https://twitter.com/nesty_olazabal" target="_parent">
+		<a href="https://twitter.com/nesty_olazabal" target="_parent" alt="Twitter">
 			<span data-tip="Twitter" class="tooltip hover:cursor-pointer hover:scale-125 duration-300">
 				<Icon icon="logos:twitter" class="mx-2 text-3xl" />
 			</span>
 		</a>
-		<a href="https://github.com/striderskynet" target="_parent">
+		<a href="https://www.reddit.com/user/os_nesty" target="_parent" alt="Reddit">
 			<span data-tip="Reddit" class="tooltip hover:cursor-pointer hover:scale-125 duration-300">
 				<Icon icon="logos:reddit-icon" class="mx-2 text-3xl" />
 			</span>
 		</a>
 
-		<a href="https://github.com/striderskynet" target="_parent">
+		<a href="https://github.com/striderskynet" target="_parent" alt="Github">
 			<span data-tip="Github" class="tooltip hover:cursor-pointer hover:scale-125 duration-300">
 				<Icon icon="arcticons:github" class="text-white mx-2 text-3xl" />
 			</span>
 		</a>
 
-		<a href="https://www.linkedin.com/in/jose-olazabal/" target="_parent">
+		<a href="https://www.linkedin.com/in/jose-olazabal/" target="_parent" alt="LinkedIN">
 			<span data-tip="LinkedIn" class="tooltip hover:cursor-pointer hover:scale-125 duration-300">
 				<Icon icon="logos:linkedin-icon" class="text-white mx-2 text-3xl" />
 			</span>
