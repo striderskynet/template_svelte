@@ -83,8 +83,15 @@
 	<div class="navbar-end">
 		<div class="form-control">
 			<label class="label cursor-pointer">
-				<input on:click={handleClickLang} type="checkbox" class="toggle" />
-				<span class="label-text mx-2">Spanish</span>
+				<input
+					on:click={handleClickLang}
+					type="checkbox"
+					class="toggle"
+					data-testid="language-changer"
+				/>
+				<span class="label-text mx-2" data-testid="language-tester"
+					>{$locale === 'en' ? 'Spanish' : 'English'}</span
+				>
 			</label>
 		</div>
 	</div>
