@@ -88,7 +88,7 @@
 					</g>
 				</svg>
 			</span>
-			<span>Casalis Express</span>
+			<span>{$_('global.title')}</span>
 		</a>
 	</div>
 	<div class="nav-center h-full">
@@ -113,8 +113,10 @@
 			<li><a href="#anchor-about">{$_('navbar.menu_about')}</a></li> -->
 		</ul>
 	</div>
-	<div class="nav-end font-bold flex items-center gap-2">
-		<Icon icon="mdi:phone" /> +1 (307) 699-1259
+	<div class="nav-end font-bold">
+		<a href="tel:+1 (307) 699-1259" class="flex items-center gap-2"></a>
+			<Icon icon="mdi:phone" /> +1 (307) 699-1259
+		</a>
 	</div>
 </div>
 
