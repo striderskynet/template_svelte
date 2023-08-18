@@ -37,4 +37,4 @@
 	</div>
 </main>
 
-<main class="min-h-screen"></main>
+<main class="min-h-[50vh]"></main>
