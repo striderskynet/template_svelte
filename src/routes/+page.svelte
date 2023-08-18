@@ -45,7 +45,7 @@
 		</svg>
 	</div>
 
-	<div class="flex justify-center text-base-100 mb-20 md:mb-40 z-40">
+	<div class="flex justify-center text-base-100 mb-20 md:mb-40 z-30">
 		<div
 			class="flex flex-col md:flex-row gap-2 md:gap-10 items-center justify-center min-w-[350px] md:min-w-[800px] max-w-[70%] py-5 px-10 rounded-xl"
 		>

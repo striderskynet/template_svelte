@@ -16,11 +16,11 @@
 <svelte:window bind:scrollY={scroll_y} />
 
 <div
-	class={`flex items-end justify-between duration-500 ${
+	class={`flex items-end justify-between  ${
 		scroll_y < 250
 			? 'bg-transparent border-b-2 border-b-transparent'
 			: 'bg-black bg-opacity-80 border-b-2 border-b-gray-700'
-	}  fixed w-screen h-[2lh] px-10 md:px-10 text-base-100 z-40`}
+	}  fixed w-screen h-[2lh] px-0 sm:px-2 text-base-100 z-40`}
 >
 	<div class="nav-start uppercase font-bold tracking-tighter text-lg min-w-[300px]">
 		<a href="/" class="flex gap-3 hover:text-accent duration-500">
@@ -98,38 +98,60 @@
 			{/each}
 		</ul>
 	</div>
-	<div class="nav-end font-bold flex gap-5 mr-1">
-		<a href="tel:+1 (307) 699-1259" class="flex items-center gap-2">
-			<Icon icon="mdi:phone" class="lg:text-base text-2xl" />
-			<div class="duration-300 hidden lg:flex">+1 (307) 699-1259</div>
-		</a>
+	<div class="flex">
+		<div class="nav-end font-bold flex gap-5 mr-1">
+			<a href="tel:+1 (307) 699-1259" class="flex items-center gap-2">
+				<Icon icon="mdi:phone" class="lg:text-base text-2xl mb-[1px]" />
+				<div class="duration-300 hidden lg:flex">+1 (307) 699-1259</div>
+			</a>
+		</div>
+		<button
+			class="cursor-pointer md:hidden text-base-100 !z-50"
+			on:keypress={() => {}}
+			on:click={(e) => {
+				if (menu_open === 0) {
+					menu_open = 1;
+					document.body.style.overflow = 'hidden';
+				} else {
+					menu_open = 0;
+					document.body.style.overflow = '';
+				}
+				//console.log(menu_open, document.body.style.overflow);
+			}}
+		>
+			<Icon
+				icon={menu_icon[menu_open]}
+				class={`lg:text-base text-3xl ${menu_open === 1 ? 'text-accent' : ''}`}
+			/>
+		</button>
 	</div>
 </div>
-<button
-	class="cursor-pointer md:hidden fixed right-1 top-[18px] text-base-100 z-50"
-	on:keypress={() => {}}
-	on:click={(e) => {
-		if (menu_open === 0) {
-			menu_open = 1;
-			document.body.style.overflow = 'hidden';
-		} else {
-			menu_open = 0;
-			document.body.style.overflow = '';
-		}
-		//console.log(menu_open, document.body.style.overflow);
-	}}
->
-	<Icon
-		icon={menu_icon[menu_open]}
-		class={`lg:text-base text-3xl ${menu_open === 1 ? 'text-accent' : ''}`}
-	/>
-</button>
+
 <div class="w-screen overflow-clip sm:hidden absolute h-screen">
 	<div
 		class={`menu-back text-base-100 pt-[20%] border-l-8 border-l-accent ${
 			menu_open === 1 ? 'is-open' : ''
 		} absolute z-40 h-[100%] w-[50vh] bg-black`}
 	>
+		<button
+			class="cursor-pointer md:hidden text-base-100 absolute top-5 left-[38%]"
+			on:keypress={() => {}}
+			on:click={(e) => {
+				if (menu_open === 0) {
+					menu_open = 1;
+					document.body.style.overflow = 'hidden';
+				} else {
+					menu_open = 0;
+					document.body.style.overflow = '';
+				}
+				//console.log(menu_open, document.body.style.overflow);
+			}}
+		>
+			<Icon
+				icon={menu_icon[menu_open]}
+				class={`lg:text-base text-3xl ${menu_open === 1 ? 'text-accent' : ''}`}
+			/>
+		</button>
 		<ul class="flex flex-col gap-10 p-10">
 			{#each menu as m, i}
 				<li
