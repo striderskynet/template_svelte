@@ -17,10 +17,10 @@
 
 <div
 	class={`flex items-end justify-between  ${
-		scroll_y < 250
+		scroll_y < 50
 			? 'bg-transparent border-b-2 border-b-transparent'
 			: 'bg-black bg-opacity-80 border-b-2 border-b-gray-700'
-	}  fixed w-screen h-[2lh] px-10 text-base-100 z-40 duration-500`}
+	}  fixed w-screen h-[2lh] pb-2 px-10 text-base-100 z-40 duration-500`}
 >
 	<div class="nav-start uppercase font-bold tracking-tighter text-lg min-w-[300px]">
 		<a href="/" class="flex gap-3 hover:text-accent duration-500">
@@ -127,31 +127,14 @@
 	</div>
 </div>
 
-<div class="w-screen overflow-clip sm:hidden absolute h-screen">
+<div
+	class={`${menu_open === 1 ? 'ml-[0]' : 'ml-[100%]'} w-screen overflow-clip fixed h-screen z-30`}
+>
 	<div
 		class={`menu-back text-base-100 pt-[20%] border-l-8 border-l-accent ${
 			menu_open === 1 ? 'is-open' : ''
-		} absolute z-40 h-[100%] w-[50vh] bg-black`}
+		} absolute z-50 h-[100%] w-[50vh] bg-black`}
 	>
-		<button
-			class="cursor-pointer md:hidden text-base-100 absolute top-5 left-[35%]"
-			on:keypress={() => {}}
-			on:click={(e) => {
-				if (menu_open === 0) {
-					menu_open = 1;
-					document.body.style.overflow = 'hidden';
-				} else {
-					menu_open = 0;
-					document.body.style.overflow = '';
-				}
-				//console.log(menu_open, document.body.style.overflow);
-			}}
-		>
-			<Icon
-				icon={menu_icon[menu_open]}
-				class={`lg:text-base text-3xl ${menu_open === 1 ? 'text-accent' : ''}`}
-			/>
-		</button>
 		<ul class="flex flex-col gap-10 p-10">
 			{#each menu as m, i}
 				<li

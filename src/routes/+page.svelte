@@ -16,7 +16,7 @@
 
 <main
 	style={`background:  no-repeat center url(${hero_bg})`}
-	class="min-h-screen flex flex-col justify-between relative"
+	class="min-h-screen flex flex-col justify-between relative z-10"
 >
 	<div />
 	<div
@@ -35,7 +35,7 @@
 			></span>
 		{/if}
 	</div>
-	<div class="bottom-0 absolute w-[100%]">
+	<div class="-bottom-1 absolute w-[100%]">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 			<path
 				fill="#ffffff"
@@ -45,7 +45,7 @@
 		</svg>
 	</div>
 
-	<div class="flex justify-center text-base-100 mb-20 md:mb-40 z-30">
+	<div class="flex justify-center text-base-100 mb-20 md:mb-40">
 		<div
 			class="flex flex-col md:flex-row gap-2 md:gap-10 items-center justify-center min-w-[350px] md:min-w-[800px] max-w-[70%] py-5 px-10 rounded-xl"
 		>
