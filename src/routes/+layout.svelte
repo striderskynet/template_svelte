@@ -1,8 +1,8 @@
 <script>
 	import { _, locale, locales } from '$language/i18n';
 
-	import Header from '$components/header.svelte';
-	import Footer from '$components/footer.svelte';
+	import Header from '$components/design/header.svelte';
+	import Footer from '$components/design/footer.svelte';
 </script>
 
 <svelte:head>
@@ -12,7 +12,7 @@
 
 <article>
 	<Header />
-	<section class="h-[100vh]"><slot /></section>
+	<slot />
 	<Footer />
 </article>
 

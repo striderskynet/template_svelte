@@ -1,11 +1,11 @@
 <script>
-	import { _, locale, locales } from '$language/i18n';
+	import { _ } from '$language/i18n';
 	import Icon from '@iconify/svelte';
 
 	$: _;
 </script>
 
-<footer class="footer footer-center p-10 bg-base-200 text-base-content">
+<footer class="footer footer-center p-10 bg-base-content text-base-100">
 	<div class="grid grid-flow-col gap-4">
 		<a href="#link" class="link link-hover">{$_('navbar.menu_portfolio')}</a>
 		<a href="#link" class="link link-hover">{$_('navbar.menu_experience')}</a>
