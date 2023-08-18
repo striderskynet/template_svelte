@@ -6,11 +6,11 @@
 </script>
 
 <footer class="footer footer-center p-10 bg-base-content text-base-100">
-	<div class="grid grid-flow-col gap-4">
+	<!-- <div class="grid grid-flow-col gap-4">
 		<a href="#link" class="link link-hover">{$_('navbar.menu_portfolio')}</a>
 		<a href="#link" class="link link-hover">{$_('navbar.menu_experience')}</a>
 		<a href="#link" class="link link-hover">{$_('navbar.menu_about')}</a>
-	</div>
+	</div> -->
 	<div class="flex">
 		<a href="https://github.com/striderskynet" target="_parent" alt="Facebook">
 			<span data-tip="Facebook" class="tooltip hover:cursor-pointer hover:scale-125">

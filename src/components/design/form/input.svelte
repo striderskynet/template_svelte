@@ -24,7 +24,7 @@
 				} text-black placeholder-[#929DA7] outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]`}
 			/>
 			{#if icon}
-				<span class="absolute top-1/2 left-4 -translate-y-1/2">
+				<span class="absolute top-1/2 left-4 -translate-y-1/2 text-black">
 					<Icon {icon} class="text-xl" />
 				</span>
 			{/if}

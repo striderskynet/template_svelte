@@ -1,5 +1,5 @@
 export default {
-    'global.title': 'Olazabal J • Portfolio',
+    'global.title': 'Casalis Service Express',
 
 
     'footer.copyright_start': 'Copyright © 2023 - Made with ',

@@ -1,4 +1,6 @@
 <script>
+	import { _ } from '$language/i18n';
+
 	import Icon from '@iconify/svelte';
 	import hero_bg from '$assets/landing_page_hero.jpg';
 	import Input from '$components/design/form/input.svelte';
@@ -11,15 +13,16 @@
 	<div
 		class="text-base-100 font-extrabold tracking-tighter text-5xl uppercase -mt-[300px] flex flex-col items-center"
 	>
+		<span class="text-base tracking-normal font-normal">{$_('global.title')}</span>
 		<span>Premium Car Service</span>
 		<span class="border-b-8 w-[50%] h-5 block"></span>
 	</div>
 	<div class="z-20 absolute bottom-24 w-[100%] flex justify-center text-base-100">
 		<div class="w-[50%] flex gap-10 items-center">
 			<div class="flex min-w-fit items-center gap-2 mt-4">
-				<Icon icon="mdi:settings" class="text-2xl" /> Advanced Search
+				<Icon icon="mingcute:settings-2-fill" class="text-2xl" /> Advanced Search
 			</div>
-			<Input label="Pick-up Location" type="text" />
+			<Input icon="mdi:map-marker" label="Pick-up Location" type="text" />
 			<Input label="Pick-up Date" type="date" />
 		</div>
 	</div>

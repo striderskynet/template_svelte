@@ -114,7 +114,7 @@
 		</ul>
 	</div>
 	<div class="nav-end font-bold">
-		<a href="tel:+1 (307) 699-1259" class="flex items-center gap-2"></a>
+		<a href="tel:+1 (307) 699-1259" class="flex items-center gap-2">
 			<Icon icon="mdi:phone" /> +1 (307) 699-1259
 		</a>
 	</div>
