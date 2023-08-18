@@ -13,29 +13,44 @@
 	</div> -->
 	<div class="flex">
 		<a href="https://github.com/striderskynet" target="_parent" alt="Facebook">
-			<span data-tip="Facebook" class="tooltip hover:cursor-pointer hover:scale-125">
+			<span
+				data-tip="Facebook"
+				class="tooltip hover:cursor-pointer saturate-0 hover:saturate-100 duration-500"
+			>
 				<Icon icon="logos:facebook" class="mx-2 text-3xl" alt="Facebook" />
 			</span>
 		</a>
 		<a href="https://twitter.com/nesty_olazabal" target="_parent" alt="Twitter">
-			<span data-tip="Twitter" class="tooltip hover:cursor-pointer hover:scale-125 duration-300">
+			<span
+				data-tip="Twitter"
+				class="tooltip hover:cursor-pointer saturate-0 hover:saturate-100 duration-500"
+			>
 				<Icon icon="logos:twitter" class="mx-2 text-3xl" alt="Twitter" />
 			</span>
 		</a>
 		<a href="https://www.reddit.com/user/os_nesty" target="_parent" alt="Reddit">
-			<span data-tip="Reddit" class="tooltip hover:cursor-pointer hover:scale-125 duration-300">
+			<span
+				data-tip="Reddit"
+				class="tooltip hover:cursor-pointer saturate-0 hover:saturate-100 duration-500"
+			>
 				<Icon icon="logos:reddit-icon" class="mx-2 text-3xl" alt="Reddit" />
 			</span>
 		</a>
 
 		<a href="https://github.com/striderskynet" target="_parent" alt="Github">
-			<span data-tip="Github" class="tooltip hover:cursor-pointer hover:scale-125 duration-300">
+			<span
+				data-tip="Github"
+				class="tooltip hover:cursor-pointer saturate-0 hover:saturate-100 duration-500"
+			>
 				<Icon icon="arcticons:github" class="text-white mx-2 text-3xl" alt="Github" />
 			</span>
 		</a>
 
 		<a href="https://www.linkedin.com/in/jose-olazabal/" target="_parent" alt="LinkedIN">
-			<span data-tip="LinkedIn" class="tooltip hover:cursor-pointer hover:scale-125 duration-300">
+			<span
+				data-tip="LinkedIn"
+				class="tooltip hover:cursor-pointer saturate-0 hover:saturate-100 duration-500"
+			>
 				<Icon icon="logos:linkedin-icon" class="text-white mx-2 text-3xl" alt="LinkedIN" />
 			</span>
 		</a>
@@ -50,7 +65,7 @@
 			<span data-tip="Svelte" class="tooltip hover:cursor-pointer"
 				><Icon icon="devicon:svelte" class="text-red-500 mx-2 text-xl" /></span
 			>
-			{$_('footer.copyright_end')}
+			<a href="https://olazabalj.vercel.app" target="_blank">{$_('footer.copyright_end')}</a>
 		</p>
 	</div>
 </footer>
