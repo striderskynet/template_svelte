@@ -20,7 +20,7 @@
 		scroll_y < 250
 			? 'bg-transparent border-b-2 border-b-transparent'
 			: 'bg-black bg-opacity-80 border-b-2 border-b-gray-700'
-	}  fixed w-screen h-[2lh] px-0 sm:px-2 text-base-100 z-40`}
+	}  fixed w-screen h-[2lh] px-10 text-base-100 z-40 duration-500`}
 >
 	<div class="nav-start uppercase font-bold tracking-tighter text-lg min-w-[300px]">
 		<a href="/" class="flex gap-3 hover:text-accent duration-500">
@@ -134,7 +134,7 @@
 		} absolute z-40 h-[100%] w-[50vh] bg-black`}
 	>
 		<button
-			class="cursor-pointer md:hidden text-base-100 absolute top-5 left-[38%]"
+			class="cursor-pointer md:hidden text-base-100 absolute top-5 left-[35%]"
 			on:keypress={() => {}}
 			on:click={(e) => {
 				if (menu_open === 0) {

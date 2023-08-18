@@ -27,7 +27,7 @@
 				>{$_('global.title')}</span
 			>
 
-			<span in:fade={{ duration: 1000 }} class="flex flex-wrap justify-center gap-3"
+			<span in:fade={{ duration: 1000 }} class="flex flex-wrap justify-center gap-3 animate-pulse"
 				><span>Premium Car</span> Service</span
 			>
 
