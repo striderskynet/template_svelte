@@ -10,7 +10,7 @@
 	<meta name="description" content={$_('global.description')} />
 </svelte:head>
 
-<article>
+<article class="overflow-hidden min-h-screen relative">
 	<Header />
 	<slot />
 	<Footer />

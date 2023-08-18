@@ -6,28 +6,23 @@
 
 	import img_logo from '$assets/logo.svg';
 
-	// const handleClickLang = (e) => {
-	// 	e.target.checked ? ($locale = 'es') : ($locale = 'en');
-	// };
-
-	const handleAnchorClick = (event) => {
-		const link = event.currentTarget;
-		const anchorId = new URL(link.href).hash.replace('#', '');
-		const anchor = document.getElementById(anchorId);
-
-		window.scrollTo({
-			top: anchor.offsetTop,
-			behavior: 'smooth'
-		});
-	};
+	let menu_icon = ['mdi:hamburger-menu', 'mdi:close'],
+		menu_open = 0,
+		scroll_y;
 
 	$: _;
 </script>
 
+<svelte:window bind:scrollY={scroll_y} />
+
 <div
-	class="flex items-end justify-between bg-transparent fixed w-screen h-[2lh] px-20 text-base-100"
+	class={`flex items-end justify-between duration-500 ${
+		scroll_y < 250
+			? 'bg-transparent border-b-2 border-b-transparent'
+			: 'bg-black bg-opacity-80 border-b-2 border-b-gray-700'
+	}  fixed w-screen h-[2lh] px-10 md:px-10 text-base-100 z-40`}
 >
-	<div class="nav-start uppercase font-bold tracking-tighter text-lgl">
+	<div class="nav-start uppercase font-bold tracking-tighter text-lg min-w-[300px]">
 		<a href="/" class="flex gap-3 hover:text-accent duration-500">
 			<span>
 				<svg
@@ -91,8 +86,8 @@
 			<span>{$_('global.title')}</span>
 		</a>
 	</div>
-	<div class="nav-center h-full">
-		<ul class="flex gap-10 px-1 !my-0 h-full">
+	<div class="nav-center h-full hidden md:flex">
+		<ul class="flex gap-5 px-1 !my-0 h-full">
 			{#each menu as m, i}
 				<li
 					class="menu-link h-full flex duration-300 active:border-t-accent border-t-4 border-t-transparent hover:border-t-accent items-end !my-0"
@@ -101,90 +96,52 @@
 					<a href={m.link}>{m.title}</a>
 				</li>
 			{/each}
-
-			<!-- <li>
-				<a
-					href="#anchor-portfolio"
-					class:active={$page.url.hash.includes('#anchor-portfolio')}
-					on:click|preventDefault={handleAnchorClick}>{$_('navbar.menu_portfolio')}</a
-				>
-			</li>
-			<li><a href="#anchor-experience">{$_('navbar.menu_experience')}</a></li>
-			<li><a href="#anchor-about">{$_('navbar.menu_about')}</a></li> -->
 		</ul>
 	</div>
-	<div class="nav-end font-bold">
+	<div class="nav-end font-bold flex gap-5 mr-1">
 		<a href="tel:+1 (307) 699-1259" class="flex items-center gap-2">
-			<Icon icon="mdi:phone" /> +1 (307) 699-1259
+			<Icon icon="mdi:phone" class="lg:text-base text-2xl" />
+			<div class="duration-300 hidden lg:flex">+1 (307) 699-1259</div>
 		</a>
 	</div>
 </div>
-
-<!-- <div class="navbar bg-red-300 py-0 z-50 duration-300 delay-300 fixed top-0 text-base-100">
-	<div class="navbar-start bg-red-500">
-		<div class="dropdown">
-			<span class="btn btn-ghost lg:hidden">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					><path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M4 6h16M4 12h8m-8 6h16"
-					/></svg
-				>
-			</span>
-			<ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-b-lg w-52">
-				<li>
-					<a href="#anchor-portfolio">{$_('navbar.menu_portfolio')}</a>
-				</li>
-				<li><a href="#anchor-experience">{$_('navbar.menu_experience')}</a></li>
-				<li><a href="#anchor-about">{$_('navbar.menu_about')}</a></li>
-			</ul>
-		</div>
-		<a class="btn btn-ghost normal-case text-xl" href="/">Casalis Express</a>
-	</div>
-	<div class="navbar-center hidden lg:flex !py-0 bg-blue-300">
-		<ul class="menu menu-horizontal px-1 !my-0 bg-red-600">
+<button
+	class="cursor-pointer md:hidden fixed right-1 top-[18px] text-base-100 z-50"
+	on:keypress={() => {}}
+	on:click={(e) => {
+		if (menu_open === 0) {
+			menu_open = 1;
+			document.body.style.overflow = 'hidden';
+		} else {
+			menu_open = 0;
+			document.body.style.overflow = '';
+		}
+		//console.log(menu_open, document.body.style.overflow);
+	}}
+>
+	<Icon
+		icon={menu_icon[menu_open]}
+		class={`lg:text-base text-3xl ${menu_open === 1 ? 'text-accent' : ''}`}
+	/>
+</button>
+<div class="w-screen overflow-clip sm:hidden absolute h-screen">
+	<div
+		class={`menu-back text-base-100 pt-[20%] border-l-8 border-l-accent ${
+			menu_open === 1 ? 'is-open' : ''
+		} absolute z-40 h-[100%] w-[50vh] bg-black`}
+	>
+		<ul class="flex flex-col gap-10 p-10">
 			{#each menu as m, i}
-				<li class="bg-red-300 !my-0"><a href="">{m.title}</a></li>
-			{/each}
-			<!--             
-			<li>
-				<a
-					href="#anchor-portfolio"
-					class:active={$page.url.hash.includes('#anchor-portfolio')}
-					on:click|preventDefault={handleAnchorClick}>{$_('navbar.menu_portfolio')}</a
+				<li
+					class="menu-link h-full flex duration-300 active:border-t-accent border-t-4 border-t-transparent hover:border-t-accent items-end !my-0"
+					class:active={$page.url.pathname === m.link}
 				>
-			</li>
-			<li><a href="#anchor-experience">{$_('navbar.menu_experience')}</a></li>
-			<li><a href="#anchor-about">{$_('navbar.menu_about')}</a></li> 
+					<a href={m.link}>{m.title}</a>
+				</li>
+			{/each}
 		</ul>
 	</div>
-	<div class="navbar-end">
-		<div class="font-bold flex items-center gap-2">
-			<Icon icon="mdi:phone" /> +1 (307) 699-1259
-		</div>
-
-		<div class="form-control">
-			<label class="label cursor-pointer">
-				<input
-					on:click={handleClickLang}
-					type="checkbox"
-					class="toggle"
-					data-testid="language-changer"
-				/>
-				<span class="label-text mx-2" data-testid="language-tester"
-					>{$locale === 'en' ? 'Spanish' : 'English'}</span
-				>
-			</label>
-		</div>
-	</div>
-</div> -->
+</div>
 
 <style>
 	.active {
@@ -193,5 +150,13 @@
 
 		color: hsl(var(--a) / var(--tw-border-opacity));
 		font-weight: bold;
+	}
+	.menu-back {
+		transform: skew(0) translateX(200%);
+		transition-duration: 1s;
+	}
+	.menu-back.is-open {
+		transition-duration: 1s;
+		transform: skew(-10deg) translateX(30%);
 	}
 </style>
